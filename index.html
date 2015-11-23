@@ -1,35 +1,30 @@
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Angular2 Migration</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<style>
-			body {
-				width: 90%;
-				margin: auto;
-			}
-			.panel {
-				padding: 0 0 1em;
-				min-height: 250px;
-				max-height: 250px
-			}
-			button {
-				position: absolute;
-				bottom: 1em;
-				margin-left: 1em;
-			}
-			.panel-heading .glyphicon {
-				margin-right: .5em;
-			}
-		</style>
-	</head>
-	<body ng-app="Brewery">
-		<header><h1>Zenika Brewery !!</h1></header>
-		<main ng-controller="BreweryCtrl">
-				<beer-item ng-repeat="b in beers" beer="b" ></beer-item>
-		</main>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-	</body>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Angular2 Migration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body ng-app="Brewery">
+  <header>
+    <h1>Zenika Brewery !!</h1>
+  </header>
+  <div ng-controller="BreweryCtrl">
+    <div class="col-md-4 panel panel-default" ng-repeat="beer in beers">
+      <div class="panel-heading">
+        <span ng-class="beer.note | NoteFilter"></span>{{beer.name}}
+      </div>
+      <div class="panel-body">
+        {{beer.description}}
+      </div>
+      <button ng-click="selectBeer(beer)" class="btn btn-primary">Give me a pinte !</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
-	
