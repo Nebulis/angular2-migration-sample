@@ -1,3 +1,6 @@
 angular.module('Brewery.controller', []).controller('BreweryCtrl', ['$scope', 'BreweryService', function($scope, BreweryService){
-	$scope.beers = BreweryService.getBeers();
+  $scope.beers = BreweryService.getBeers();
+  $scope.selectBeer = function (beer) {
+    BreweryService.getOnePinte(beer);
+  };
 }]);
