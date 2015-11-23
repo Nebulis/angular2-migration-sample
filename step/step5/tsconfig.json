@@ -1,7 +1,11 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "sourceMap": true
-    }
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "emitDecoratorMetadata" : true,
+    "watch" : true
+  },
+  "files" : [
+    "AppComponent.ts"
+  ]
 }
