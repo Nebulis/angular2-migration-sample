@@ -1,3 +1,3 @@
-angular.module('Brewery.controller', []).controller('BreweryCtrl', ['BreweryService', function(BreweryService){
-	this.beers = BreweryService.getBeers();
+angular.module('Brewery.controller', []).controller('BreweryCtrl', ['$scope', 'BreweryService', function($scope, BreweryService){
+  $scope.beers = BreweryService.getBeers();
 }]);
