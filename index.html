@@ -16,7 +16,7 @@
   </header>
 
   <div ng-controller="BreweryCtrl" class="flex-container">
-    <div class="panel panel-default" ng-repeat="beer in beers">
+    <div class="panel-container panel panel-default" ng-repeat="beer in beers">
       <div class="panel-heading">
         <span ng-class="beer.note | NoteFilter"></span>{{beer.name}}
       </div>
