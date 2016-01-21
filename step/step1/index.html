@@ -2,25 +2,31 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular2 Migration</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
       <link rel="stylesheet" href="app.css">
   </head>
   <body ng-app="Brewery">
     <header>
+      <img src="img/Logo_arrondi_Horizontal2.png" />
       <h1>Zenika Brewery !!</h1>
+      <img src="img/Logo_arrondi_Horizontal2.png" />
     </header>
-    <div ng-controller="BreweryCtrl">
-      <div class="col-md-4 panel panel-default" ng-repeat="beer in beers">
+
+    <div ng-controller="BreweryCtrl" class="flex-container">
+      <div class="panel-container panel panel-default" ng-repeat="beer in beers">
         <div class="panel-heading">
           <span ng-class="beer.note | NoteFilter"></span>{{beer.name}}
         </div>
         <div class="panel-body">
-          {{beer.description}}
+          <div class="icon-container"><img ng-src="img/{{beer.image}}" class="icon" /></div>
+          <div class="description">{{beer.description}}</div>
         </div>
-        <button ng-click="selectBeer(beer)" class="btn btn-primary">Give me a pinte !</button>
+        <div class="flex-panel-footer">
+          <button ng-click="selectBeer(beer)" class="btn btn-primary">Give me a pinte !</button>
+        </div>
       </div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="components/brewery.controller.js"></script>
     <script type="text/javascript" src="components/brewery.service.js"></script>
