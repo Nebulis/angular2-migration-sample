@@ -1,17 +1,71 @@
 body {
-  width: 90%;
   margin: auto;
+  background-image: url("img/row-svg-diamonds.svg");
+  background-color: #af1e3a;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
+
+header {
+  background-color: white;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 {
+  margin: 0px;
+  text-align: center;
+  flex: 1;
+}
+
+header > img {
+  max-width: 100%;
+  max-height: 50px;
+}
+
 .panel {
   padding: 0 0 1em;
   min-height: 250px;
-  max-height: 250px
+  max-height: 250px;
 }
-button {
-  position: absolute;
-  bottom: 1em;
-  margin-left: 1em;
-}
+
 .panel-heading .glyphicon {
   margin-right: .5em;
+}
+
+.flex-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.panel-container {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-body {
+  flex: 1;
+  display: flex;
+}
+
+.panel-body > div {
+  margin: 5px;
+}
+
+.flex-panel-footer {
+  margin: auto;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
 }
