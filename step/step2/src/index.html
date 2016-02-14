@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular2 Migration</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app/app.css">
+  </head>
+  <body ng-app="Brewery">
+    <header>
+      <img src="img/Logo_arrondi_Horizontal2.png" />
+      <h1>Zenika Brewery !!</h1>
+      <img src="img/Logo_arrondi_Horizontal2.png" />
+    </header>
+    <main ng-controller="BreweryCtrl" class="flex-container">
+        <beer-item ng-repeat="b in beers" beer="b" class="panel-container panel panel-default">
+
+        </beer-item>
+    </main>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app/index.js"></script>
+  </body>
+</html>
+  
