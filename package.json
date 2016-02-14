@@ -2,15 +2,8 @@
   "name": "5to6",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "^1.4.5",
-    "angular-animate": "^1.4.3",
-    "angular-aria": "^1.4.3",
-    "angular-material": "^0.10.0",
-    "angular-new-router": "^0.5.3",
-    "angular-touch": "^1.4.6",
-    "animate.css": "^3.4.0",
-    "bootstrap": "^3.3.5",
-    "co": "^4.6.0"
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.5"
   },
   "scripts": {
     "test": "gulp test"

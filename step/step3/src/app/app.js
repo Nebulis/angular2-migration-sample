@@ -1,12 +1,9 @@
 angular.module('Brewery', ['Brewery.service', 'Brewery.filter', 'Brewery.directive'])
-  .directive('app', function (BreweryService) {
-    return {
+  .component('app',  {
       templateUrl: 'app/app.html',
       controllerAs: 'app',
-      bindToController: true,
-      controller: function () {
+      controller: function (BreweryService) {
         this.beers = BreweryService.getBeers();
       }
     }
-
-  });
+  );
