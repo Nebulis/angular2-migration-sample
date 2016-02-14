@@ -17,3 +17,5 @@ angular.module('Brewery', [ ])
     }
 
   });
+
+angular.bootstrap(document.body, ['Brewery']);
