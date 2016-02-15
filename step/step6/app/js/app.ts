@@ -10,16 +10,13 @@ const upgradeAdapter = new UpgradeAdapter();
 angular.module('Brewery', [ ])
   .service('BreweryService', BreweryService)
   .filter('NoteFilter', noteFilter)
-  .directive('beerItem', beerItem)
-  .directive('app', function () {
-    return {
+  .component('beerItem', beerItem)
+  .component('app', {
       templateUrl: 'js/app.html',
       controllerAs: 'app',
-      bindToController: true,
       controller: function (BreweryService) {
         this.beers = BreweryService.getBeers();
       }
-    }
 
   });
 

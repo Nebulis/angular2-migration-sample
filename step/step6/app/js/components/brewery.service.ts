@@ -6,7 +6,7 @@ export class BreweryService {
   getBeers() {
     return [
       {
-        name: 'Heinekkenes',
+        name: 'Heinekken',
         note: 0,
         description: 'Heineken International est un groupe brassicole d’origine néerlandaise fondé en 1873 par Gerard Adriaan Heineken. C’est en 2011 le 3e brasseur au niveau mondial3, avec une part de marché en volume de 8,8 %, derrière Anheuser-Busch InBev (18,3 %) et SABMiller (9,8 %)4.',
         image: 'heineken.jpg'
