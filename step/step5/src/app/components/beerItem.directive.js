@@ -1,14 +1,10 @@
-export function beerItem() {
-  return {
-    restrict: 'E',
-    scope: {
+export var beerItem = {
+    bindings: {
       beer: '='
     },
     controllerAs: 'bi',
-    bindToController: true,
     templateUrl: './app/components/beer-item.html',
     controller: BeerItemController
-  };
 };
 
 class BeerItemController {
