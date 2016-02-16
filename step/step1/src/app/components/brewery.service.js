@@ -1,5 +1,6 @@
-angular.module('Brewery.service', []).service('BreweryService', function(){
-	this.getBeers = function(){
+angular.module('Brewery').factory('BreweryService', function(){
+  var service = {}
+	service.getBeers = function(){
 		return [
 			{image: 'heineken.jpg', name:'Heinekken', note: 0, description:'Heineken International est un groupe brassicole d’origine néerlandaise fondé en 1873 par Gerard Adriaan Heineken. C’est en 2011 le 3e brasseur au niveau mondial3, avec une part de marché en volume de 8,8 %, derrière Anheuser-Busch InBev (18,3 %) et SABMiller (9,8 %)4.'},
 			{image: 'leffe.png', name:'Leffe', note: 2.5, description:'La Leffe (ou Abbaye de Leffe) est une bière belge d\'Abbaye reconnue.'},
@@ -10,7 +11,8 @@ angular.module('Brewery.service', []).service('BreweryService', function(){
 		];
 	};
 	
-	this.getOnePinte = function(beer){
+	service.getOnePinte = function(beer){
 		alert('The pint ' + beer.name + ' is almost ready !');
 	};
+  return service
 })
