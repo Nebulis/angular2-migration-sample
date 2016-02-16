@@ -1,23 +1,24 @@
 /// <reference path="../../typings/angularjs/angular-mocks.d.ts" />
 
 import { BreweryService } from './components/brewery.service';
-import { noteFilter } from './components/note.filter';
-import { beerItem } from './components/beerItem.directive';
+import { BeerItemController } from './components/beerItem.directive';
+import {HTTP_PROVIDERS} from 'angular2/http';
+import upgradeAdapter from './upgrader';
 
-import {UpgradeAdapter} from 'angular2/upgrade';
-const upgradeAdapter = new UpgradeAdapter();
+
+upgradeAdapter.addProvider(BreweryService);
+
 
 angular.module('Brewery', [ ])
   .service('BreweryService', BreweryService)
-  .filter('NoteFilter', noteFilter)
-  .component('beerItem', beerItem)
+  .directive('beerItem',
+    <angular.IDirectiveFactory>upgradeAdapter.downgradeNg2Component(BeerItemController))
   .component('app', {
       templateUrl: 'js/app.html',
       controllerAs: 'app',
       controller: function (BreweryService) {
         this.beers = BreweryService.getBeers();
       }
-
   });
 
 

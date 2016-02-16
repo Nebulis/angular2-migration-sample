@@ -1,0 +1,10 @@
+<div class="panel-heading">
+  <span ng-class="bi.beer.note | NoteFilter"></span>{{bi.beer.name}}
+</div>
+<div class="panel-body">
+  <div class="icon-container"><img ng-src="img/{{bi.beer.image}}" class="icon" /></div>
+  <div class="description">{{bi.beer.description}}</div>
+</div>
+<div class="flex-panel-footer">
+  <button ng-click="bi.selectBeer(bi.beer)" class="btn btn-primary">Give me a pinte !</button>
+</div>
