@@ -1,12 +1,3 @@
-export var beerItem = {
-    bindings: {
-      beer: '='
-    },
-    controllerAs: 'bi',
-    templateUrl: './app/components/beer-item.html',
-    controller: BeerItemController
-};
-
 class BeerItemController {
   constructor(BreweryService) {
     Object.assign(this, {BreweryService});
@@ -15,3 +6,12 @@ class BeerItemController {
     this.BreweryService.getOnePinte(this.beer);
   };
 }
+
+export var beerItem = {
+  bindings: {
+    beer: '='
+  },
+  controllerAs: 'bi',
+  templateUrl: './app/components/beer-item.html',
+  controller: BeerItemController
+};
