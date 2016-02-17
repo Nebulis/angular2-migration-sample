@@ -1,1 +1,3 @@
-angular.module('Brewery', []);
+(function() {
+  angular.module('Brewery', []);
+})();
