@@ -11,6 +11,6 @@ export var beerItem = {
       beer: '='
     },
     controllerAs: 'bi',
-    templateUrl: './js/components/beer-item.html',
+    templateUrl: './js/components/beer-item/beer-item.html',
     controller: BeerItemController
 };
