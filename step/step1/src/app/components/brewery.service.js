@@ -1,5 +1,7 @@
 (function() {
-  angular.module('Brewery').factory('BreweryService', function(){
+  angular.module('Brewery').factory('BreweryService', BreweryService);
+
+  function BreweryService(){
     var service = {};
     service.getBeers = function(){
       return [
@@ -16,5 +18,5 @@
       alert('The pint ' + beer.name + ' is almost ready !');
     };
     return service
-  })
+  }
 })();
